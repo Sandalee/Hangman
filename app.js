@@ -23,7 +23,16 @@ app.controller("GameController",['$scope',function($scope){
 		$scope.displayWord='';
 
 		selectedWord = selectRandomWord();
-		console.log(selectedWord);
+		//console.log(selectedWord);
+		//hide lettersfor the user
+		var tempDisplayWord = '';
+		for (var i = 0; i < selectedWord.length; i++) {
+			
+			tempDisplayWord += '*'; 
+		}
+
+		$scope.displayWord = tempDisplayWord;
+
 
 	}
 

@@ -36,5 +36,25 @@ app.controller("GameController",['$scope',function($scope){
 
 	}
 
+	$scope.letterChosen = function(){
+		//console.log("working!"); 
+		for (var i = 0; i < $scope.correctLettersChosen.length; i++{
+			if($scope.correctLettersChosen[i].toLowerCase()==$scope.input.letter.toLowerCase())
+			{
+				$scope.input.letter=""; //clear the input field
+				return;
+			}			
+		}
+
+		for (var i = 0; i < $scope.incorrectLettersChosen.length; i++{
+			if($scope.incorrectLettersChosen[i].toLowerCase()==$scope.input.letter.toLowerCase())
+			{
+				$scope.input.letter=""; //clear the input field
+				return;
+			}			
+		}
+
+	}
+
 	newGame();
 }]);
